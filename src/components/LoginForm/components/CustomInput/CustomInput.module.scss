@@ -1,0 +1,50 @@
+.formGroup {
+  min-height: 5rem;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .icon {
+    position: absolute;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primaryColor;
+  }
+
+  .formControl {
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid $primaryColor;
+    margin: 1px;
+
+    &:focus {
+      border: 2px solid $darkPrimaryColor;
+      outline: none;
+      margin: 0;
+    }
+  }
+
+  .isValid {
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid $red;
+    margin: 1px;
+
+    &:focus {
+      border: 2px solid $darkRed;
+      outline: none;
+      margin: 0;
+    }
+  }
+}
+
+.error {
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  color: $darkRed;
+}
