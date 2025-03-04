@@ -1,0 +1,35 @@
+.box {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(1, 1fr); /* La primera columna ocupa el espacio necesario, la segunda el restante */
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  .logo {
+    position: absolute;
+    top: 0rem; /* Ajusta esto según sea necesario */
+    left: 1rem; /* Ajusta esto para mover el logo más a la izquierda */
+    height: 150px; /* Ajusta esto al tamaño de tu logo */
+    z-index: 10; /* Asegúrate de que el logo esté sobre los otros elementos si es necesario */
+  }
+
+  .loginSection {
+    display: flex;
+    flex-direction: column; /* Organizar los hijos en una columna */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: left; /* Centrar horizontalmente */
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .image {
+    background-image: url("../../assets/labimg.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 2; /* Inicia en la segunda columna */
+    height: 100vh;
+    width: 100%; /* Asume el ancho completo de su columna */
+  }
+}

@@ -42,6 +42,9 @@ export const LoginForm = () => {
 
         <button type="submit">Loguearse</button>
       </form>
+      <p>
+        ¿No tienes una cuenta? <span>Regístrate</span>
+      </p>
     </Container>
   );
 };

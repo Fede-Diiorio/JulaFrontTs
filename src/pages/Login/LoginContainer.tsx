@@ -1,15 +1,41 @@
-import { Header, NavBarLogin, LoginForm, RegisterForm } from "../../components";
+import { LoginForm, RegisterForm, FormLayout } from "../../components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const LoginContainer = () => {
   return (
     <div>
       <BrowserRouter>
-        <Header navbar={<NavBarLogin />} />
         <Routes>
-          <Route path="/" element={<LoginForm />} />
-          <Route path="/login" element={<LoginForm />} />
-          <Route path="/register" element={<RegisterForm />} />
+          <Route
+            path="/"
+            element={
+              <FormLayout
+                form={<LoginForm />}
+                title="Bienvenido"
+                legend="Oficina Virtual del CIM - Departamento de laboratorios remotos"
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <FormLayout
+                form={<LoginForm />}
+                title="Bienvenido"
+                legend="Oficina Virtual del CIM - Departamento de laboratorios remotos"
+              />
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <FormLayout
+                form={<RegisterForm />}
+                title="Registro"
+                legend="Ingrese los datos para dar de alta su usuario"
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
