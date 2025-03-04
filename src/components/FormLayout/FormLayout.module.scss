@@ -1,12 +1,11 @@
 .box {
   position: relative;
   display: grid;
-  grid-template-columns: auto minmax(1, 1fr); /* La primera columna ocupa el espacio necesario, la segunda el restante */
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   height: 100vh;
   margin: 0;
   padding: 0;
-
   .logo {
     position: absolute;
     top: 0rem; /* Ajusta esto según sea necesario */
@@ -25,7 +24,7 @@
   }
 
   .image {
-    background-image: url("../../assets/labimg.jpg");
+    background-image: url("../../assets/labimg.webp");
     background-size: cover;
     background-position: center;
     grid-column-start: 2; /* Inicia en la segunda columna */
