@@ -2,7 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoginFormValues, loginSchema } from "../models";
 import { FaUser, FaLock } from "react-icons/fa6";
-import { CustomInput } from "../../../components";
+import { CustomInput } from "../components";
 import { Link } from "react-router-dom";
 import classes from "./LoginFrom.module.scss";
 
