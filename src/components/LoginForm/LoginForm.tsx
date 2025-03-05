@@ -1,10 +1,10 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormValues, schema } from "./models";
-import classes from "./LoginFrom.module.scss";
 import { FaUser, FaLock } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 import { CustomInput } from "../../components";
+import { Link } from "react-router-dom";
+import classes from "./LoginFrom.module.scss";
 
 export const LoginForm = () => {
   const {

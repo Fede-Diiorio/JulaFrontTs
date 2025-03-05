@@ -1,10 +1,10 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormValues, schema } from "./models";
-import { useNavigate } from "react-router-dom";
-import classes from "./RegisterForm.module.scss";
 import { FaUser, FaPen, FaEnvelope, FaLock } from "react-icons/fa6";
 import { CustomInput } from "../../components";
+import { useNavigate } from "react-router-dom";
+import classes from "./RegisterForm.module.scss";
 
 export const RegisterForm = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export const RegisterForm = () => {
     formState: { errors },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
-    mode: "onSubmit",
+    mode: "onBlur",
   });
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
