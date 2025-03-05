@@ -1,14 +1,14 @@
 .button {
-  color: $black;
-  background-color: $white;
-  padding: 0.2rem 0.8rem;
-  border: 2px solid $primaryColor;
+  font-size: 1.1rem;
+  color: $white;
+  background-color: $primaryColor;
+  padding: 0.5rem 2rem;
   border-radius: 0.5rem;
+  border: none;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    border: 2px solid $darkPrimaryColor;
     cursor: pointer;
     scale: 1.1;
   }
