@@ -1,10 +1,9 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { InputForm } from "./components";
-import { FormValues, schema } from "./model";
+import { FormValues, schema } from "./models";
 import { useNavigate } from "react-router-dom";
 import classes from "./RegisterForm.module.scss";
-import { Container } from "../../styled_components";
 import { FaUser, FaPen, FaEnvelope, FaLock } from "react-icons/fa6";
 
 export const RegisterForm = () => {
@@ -25,9 +24,10 @@ export const RegisterForm = () => {
   };
 
   return (
-    <Container>
+    <div>
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
         <InputForm
+          label="Nombre"
           icon={<FaPen />}
           control={control}
           placeholder="Nombre"
@@ -36,6 +36,7 @@ export const RegisterForm = () => {
           error={errors.name}
         />
         <InputForm
+          label="Apellido"
           icon={<FaPen />}
           control={control}
           placeholder="Apellido"
@@ -44,14 +45,16 @@ export const RegisterForm = () => {
           error={errors.lastname}
         />
         <InputForm
+          label="Nombre de usuario"
           icon={<FaUser />}
           control={control}
-          placeholder="Nombre de usuario"
+          placeholder="Usuario"
           name="username"
           type="text"
           error={errors.username}
         />
         <InputForm
+          label="Email"
           icon={<FaEnvelope />}
           control={control}
           placeholder="Email"
@@ -60,6 +63,7 @@ export const RegisterForm = () => {
           error={errors.email}
         />
         <InputForm
+          label="Contraseña"
           icon={<FaLock />}
           control={control}
           placeholder="Contraseña"
@@ -68,6 +72,7 @@ export const RegisterForm = () => {
           error={errors.password}
         />
         <InputForm
+          label="Confirmar contraseña"
           icon={<FaLock />}
           control={control}
           placeholder="Confirmar contraseña"
@@ -78,6 +83,6 @@ export const RegisterForm = () => {
 
         <button type="submit">Registrarse</button>
       </form>
-    </Container>
+    </div>
   );
 };

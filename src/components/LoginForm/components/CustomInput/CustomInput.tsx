@@ -7,7 +7,7 @@ interface Props {
   name: keyof FormValues;
   control: Control<FormValues>;
   placeholder: string;
-  label?: string;
+  label: string;
   type?: string;
   error?: FieldError;
   icon?: ReactNode;
