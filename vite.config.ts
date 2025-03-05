@@ -9,8 +9,8 @@ export default defineConfig({
       scss: {
         additionalData: `
         $primaryColor: #1095c1;
-        $darkPrimaryColor: #1082a8;
-        $lightPrimaryColor:#58d5ff;
+        $darkPrimaryColor: #0c617e;
+        $lightPrimaryColor: #58d5ff;
         $secondaryColor: #6a994e;
         $darkSecondaryColor:#3d582e;
         $white: #ffffff;

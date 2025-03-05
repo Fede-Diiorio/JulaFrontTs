@@ -1,5 +1,5 @@
 .formGroup {
-  min-height: 7rem;
+  min-height: 6.5rem;
   width: 100%;
 
   .label {
@@ -30,9 +30,14 @@
     width: 100%;
 
     &:focus {
+      box-shadow: 0 0 3px 1px $primaryColor;
       border: 2px solid $darkPrimaryColor;
       outline: none;
       margin: 0;
+    }
+
+    &:hover {
+      box-shadow: 0 0 3px 1px $primaryColor;
     }
   }
 
@@ -43,9 +48,14 @@
     margin: 1px;
 
     &:focus {
+      box-shadow: 0 0 3px 1px $red;
       border: 2px solid $darkRed;
       outline: none;
       margin: 0;
+    }
+
+    &:hover {
+      box-shadow: 0 0 3px 1px $red;
     }
   }
 }

@@ -4,6 +4,7 @@ import { InputForm } from "./components";
 import { FormValues, schema } from "./models";
 import classes from "./LoginFrom.module.scss";
 import { FaUser, FaLock } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export const LoginForm = () => {
   const {
@@ -43,8 +44,11 @@ export const LoginForm = () => {
 
         <button type="submit">Iniciar sesión</button>
       </form>
-      <p>
-        ¿No tienes una cuenta? <span>Regístrate</span>
+      <p className={classes.registerMessage}>
+        ¿Olvidaste tu contraseña? | ¿No tienes una cuenta?{" "}
+        <Link to={"/register"} className={classes.link}>
+          Regístrate
+        </Link>
       </p>
     </div>
   );

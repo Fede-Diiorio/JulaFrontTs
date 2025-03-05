@@ -24,3 +24,19 @@
     }
   }
 }
+
+.registerMessage {
+  .link {
+    color: $primaryColor;
+    border-bottom: 1px solid $primaryColor;
+    padding-bottom: 1px;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+      color: $darkPrimaryColor;
+      border-bottom: 1px solid $darkPrimaryColor;
+      cursor: pointer;
+    }
+  }
+}
