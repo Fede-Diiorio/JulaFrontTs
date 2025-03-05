@@ -2,7 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterFormValues, registerSchema } from "../models";
 import { FaUser, FaPen, FaEnvelope, FaLock } from "react-icons/fa6";
-import { CustomInput } from "../components";
+import { CustomInput, FormLayout } from "../components";
 import { useNavigate } from "react-router-dom";
 import classes from "./RegisterForm.module.scss";
 
@@ -24,7 +24,10 @@ export const RegisterForm = () => {
   };
 
   return (
-    <div>
+    <FormLayout
+      title="Registro"
+      legend="Ingrese los datos para dar de alta su usuario"
+    >
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
         <CustomInput<RegisterFormValues>
           label="Nombre"
@@ -83,6 +86,6 @@ export const RegisterForm = () => {
 
         <button type="submit">Continuar</button>
       </form>
-    </div>
+    </FormLayout>
   );
 };

@@ -2,7 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoginFormValues, loginSchema } from "../models";
 import { FaUser, FaLock } from "react-icons/fa6";
-import { CustomInput } from "../components";
+import { CustomInput, FormLayout } from "../components";
 import { Link } from "react-router-dom";
 import classes from "./LoginFrom.module.scss";
 
@@ -21,7 +21,10 @@ export const LoginForm = () => {
   };
 
   return (
-    <div>
+    <FormLayout
+      title="Bienvenido"
+      legend="Oficina Virtual del CIM - Departamento de laboratorios remotos"
+    >
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
         <CustomInput<LoginFormValues>
           label="Nombre de usuario"
@@ -51,6 +54,6 @@ export const LoginForm = () => {
           Regístrate
         </Link>
       </p>
-    </div>
+    </FormLayout>
   );
 };
