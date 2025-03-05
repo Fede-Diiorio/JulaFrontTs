@@ -1,10 +1,10 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { InputForm } from "./components";
 import { FormValues, schema } from "./models";
 import classes from "./LoginFrom.module.scss";
 import { FaUser, FaLock } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { CustomInput } from "../../components";
 
 export const LoginForm = () => {
   const {
@@ -23,7 +23,7 @@ export const LoginForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-        <InputForm
+        <CustomInput<FormValues>
           label="Nombre de usuario"
           icon={<FaUser />}
           control={control}
@@ -32,7 +32,8 @@ export const LoginForm = () => {
           type="text"
           error={errors.username}
         />
-        <InputForm
+
+        <CustomInput<FormValues>
           label="Contraseña"
           icon={<FaLock />}
           control={control}

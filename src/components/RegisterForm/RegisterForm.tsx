@@ -1,10 +1,10 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { InputForm } from "./components";
 import { FormValues, schema } from "./models";
 import { useNavigate } from "react-router-dom";
 import classes from "./RegisterForm.module.scss";
 import { FaUser, FaPen, FaEnvelope, FaLock } from "react-icons/fa6";
+import { CustomInput } from "../../components";
 
 export const RegisterForm = () => {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ export const RegisterForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-        <InputForm
+        <CustomInput<FormValues>
           label="Nombre"
           icon={<FaPen />}
           control={control}
@@ -35,7 +35,7 @@ export const RegisterForm = () => {
           type="text"
           error={errors.name}
         />
-        <InputForm
+        <CustomInput<FormValues>
           label="Apellido"
           icon={<FaPen />}
           control={control}
@@ -44,7 +44,7 @@ export const RegisterForm = () => {
           type="text"
           error={errors.lastname}
         />
-        <InputForm
+        <CustomInput<FormValues>
           label="Nombre de usuario"
           icon={<FaUser />}
           control={control}
@@ -53,7 +53,7 @@ export const RegisterForm = () => {
           type="text"
           error={errors.username}
         />
-        <InputForm
+        <CustomInput<FormValues>
           label="Email"
           icon={<FaEnvelope />}
           control={control}
@@ -62,7 +62,7 @@ export const RegisterForm = () => {
           type="email"
           error={errors.email}
         />
-        <InputForm
+        <CustomInput<FormValues>
           label="Contraseña"
           icon={<FaLock />}
           control={control}
@@ -71,7 +71,7 @@ export const RegisterForm = () => {
           type="password"
           error={errors.password}
         />
-        <InputForm
+        <CustomInput<FormValues>
           label="Confirmar contraseña"
           icon={<FaLock />}
           control={control}
