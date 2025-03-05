@@ -3,7 +3,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { InputForm } from "./components";
 import { FormValues, schema } from "./models";
 import classes from "./LoginFrom.module.scss";
-import { Container } from "../../styled_components";
 import { FaUser, FaLock } from "react-icons/fa6";
 
 export const LoginForm = () => {
@@ -21,17 +20,19 @@ export const LoginForm = () => {
   };
 
   return (
-    <Container>
+    <div>
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
         <InputForm
+          label="Nombre de usuario"
           icon={<FaUser />}
           control={control}
-          placeholder="Nombre de usuario"
+          placeholder="Usuario"
           name="username"
           type="text"
           error={errors.username}
         />
         <InputForm
+          label="Contraseña"
           icon={<FaLock />}
           control={control}
           placeholder="Contraseña"
@@ -40,11 +41,11 @@ export const LoginForm = () => {
           error={errors.password}
         />
 
-        <button type="submit">Loguearse</button>
+        <button type="submit">Iniciar sesión</button>
       </form>
       <p>
         ¿No tienes una cuenta? <span>Regístrate</span>
       </p>
-    </Container>
+    </div>
   );
 };

@@ -8,11 +8,11 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-        $primaryColor: #6a994e;
-        $darkPrimaryColor: #386641;
-        $lightPrimaryColor: #90a955;
-        $secondaryColor: #48cae4;
-        $darkSecondaryColor: #0077b6;
+        $primaryColor: #1095c1;
+        $darkPrimaryColor: #1082a8;
+        $lightPrimaryColor:#58d5ff;
+        $secondaryColor: #6a994e;
+        $darkSecondaryColor:#3d582e;
         $white: #ffffff;
         $black: #000000;
         $lightGrey: #C0C1C3;

@@ -1,7 +1,13 @@
 .formGroup {
-  min-height: 5rem;
-}
+  min-height: 7rem;
+  width: 100%;
 
+  .label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+}
 .inputWrapper {
   position: relative;
   display: flex;
@@ -18,9 +24,10 @@
 
   .formControl {
     padding: 1rem 1rem 1rem 3rem;
-    border-radius: 0.5rem;
     border: 1px solid $primaryColor;
+    border-radius: 0.5rem;
     margin: 1px;
+    width: 100%;
 
     &:focus {
       border: 2px solid $darkPrimaryColor;
