@@ -28,6 +28,7 @@
     border-radius: 0.5rem;
     margin: 1px;
     width: 100%;
+    transition: box-shadow ease-in-out 0.3s;
 
     &:focus {
       box-shadow: 0 0 3px 1px $primaryColor;
