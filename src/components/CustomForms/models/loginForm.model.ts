@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const schema = z.object({
+export const loginSchema = z.object({
   username: z
     .string({ required_error: "Requerido" })
     .min(1, "El nombre de usuario es obligatorio"),
@@ -9,4 +9,4 @@ export const schema = z.object({
     .min(6, "La contraseña es demasiado corta"),
 });
 
-export type FormValues = z.infer<typeof schema>;
+export type LoginFormValues = z.infer<typeof loginSchema>;

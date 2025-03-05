@@ -1,8 +1,8 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormValues, schema } from "./models";
+import { LoginFormValues, loginSchema } from "../models";
 import { FaUser, FaLock } from "react-icons/fa6";
-import { CustomInput } from "../../components";
+import { CustomInput } from "../../../components";
 import { Link } from "react-router-dom";
 import classes from "./LoginFrom.module.scss";
 
@@ -11,19 +11,19 @@ export const LoginForm = () => {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormValues>({
-    resolver: zodResolver(schema),
+  } = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema),
     mode: "onBlur",
   });
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
+  const onSubmit: SubmitHandler<LoginFormValues> = (data) => {
     console.log(data);
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-        <CustomInput<FormValues>
+        <CustomInput<LoginFormValues>
           label="Nombre de usuario"
           icon={<FaUser />}
           control={control}
@@ -33,7 +33,7 @@ export const LoginForm = () => {
           error={errors.username}
         />
 
-        <CustomInput<FormValues>
+        <CustomInput<LoginFormValues>
           label="Contraseña"
           icon={<FaLock />}
           control={control}

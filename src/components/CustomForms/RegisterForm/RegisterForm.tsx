@@ -1,8 +1,8 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormValues, schema } from "./models";
+import { RegisterFormValues, registerSchema } from "../models";
 import { FaUser, FaPen, FaEnvelope, FaLock } from "react-icons/fa6";
-import { CustomInput } from "../../components";
+import { CustomInput } from "../../../components";
 import { useNavigate } from "react-router-dom";
 import classes from "./RegisterForm.module.scss";
 
@@ -13,12 +13,12 @@ export const RegisterForm = () => {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormValues>({
-    resolver: zodResolver(schema),
+  } = useForm<RegisterFormValues>({
+    resolver: zodResolver(registerSchema),
     mode: "onBlur",
   });
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
+  const onSubmit: SubmitHandler<RegisterFormValues> = (data) => {
     console.log(data);
     navigate("/login");
   };
@@ -26,7 +26,7 @@ export const RegisterForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-        <CustomInput<FormValues>
+        <CustomInput<RegisterFormValues>
           label="Nombre"
           icon={<FaPen />}
           control={control}
@@ -35,7 +35,7 @@ export const RegisterForm = () => {
           type="text"
           error={errors.name}
         />
-        <CustomInput<FormValues>
+        <CustomInput<RegisterFormValues>
           label="Apellido"
           icon={<FaPen />}
           control={control}
@@ -44,7 +44,7 @@ export const RegisterForm = () => {
           type="text"
           error={errors.lastname}
         />
-        <CustomInput<FormValues>
+        <CustomInput<RegisterFormValues>
           label="Nombre de usuario"
           icon={<FaUser />}
           control={control}
@@ -53,7 +53,7 @@ export const RegisterForm = () => {
           type="text"
           error={errors.username}
         />
-        <CustomInput<FormValues>
+        <CustomInput<RegisterFormValues>
           label="Email"
           icon={<FaEnvelope />}
           control={control}
@@ -62,7 +62,7 @@ export const RegisterForm = () => {
           type="email"
           error={errors.email}
         />
-        <CustomInput<FormValues>
+        <CustomInput<RegisterFormValues>
           label="Contraseña"
           icon={<FaLock />}
           control={control}
@@ -71,7 +71,7 @@ export const RegisterForm = () => {
           type="password"
           error={errors.password}
         />
-        <CustomInput<FormValues>
+        <CustomInput<RegisterFormValues>
           label="Confirmar contraseña"
           icon={<FaLock />}
           control={control}

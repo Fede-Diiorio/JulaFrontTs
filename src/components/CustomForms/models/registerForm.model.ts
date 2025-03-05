@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const schema = z
+export const registerSchema = z
   .object({
     name: z
       .string({ required_error: "Requerido" })
@@ -28,4 +28,4 @@ export const schema = z
   });
 
 // Conversion del tipo de zod a tipado typeScript
-export type FormValues = z.infer<typeof schema>;
+export type RegisterFormValues = z.infer<typeof registerSchema>;
