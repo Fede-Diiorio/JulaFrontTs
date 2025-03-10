@@ -6,12 +6,16 @@
   height: 100vh;
   margin: 0;
   padding: 0;
-  .logo {
+
+  .link {
     position: absolute;
     top: 0rem; /* Ajusta esto según sea necesario */
     left: 1rem; /* Ajusta esto para mover el logo más a la izquierda */
-    height: 150px; /* Ajusta esto al tamaño de tu logo */
     z-index: 10; /* Asegúrate de que el logo esté sobre los otros elementos si es necesario */
+  }
+
+  .logo {
+    height: 150px; /* Ajusta esto al tamaño de tu logo */
   }
 
   .loginSection {
