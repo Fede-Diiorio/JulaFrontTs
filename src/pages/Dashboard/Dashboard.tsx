@@ -1,3 +1,10 @@
+import { Sidebar, StudentNavigation, Header } from "../../components";
+
 export const Dashboard = () => {
-  return <h1>Dashboard</h1>;
+  return (
+    <main>
+      <Header />
+      <Sidebar navbar={<StudentNavigation />} />
+    </main>
+  );
 };

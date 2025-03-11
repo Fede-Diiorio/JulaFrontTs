@@ -1,24 +1,16 @@
-import { ReactNode } from "react";
 import classes from "./Header.module.scss";
-import logo from "../../assets/react.svg";
-import { Container, FlexContainerRow } from "../../styled_components";
+import { Container } from "../../styled_components";
 
-interface Props {
-  navbar: ReactNode;
-}
+export const Header = () => {
+  const name = "Nombre";
 
-export const Header = ({ navbar }: Props) => {
   return (
     <header className={classes.header}>
-      <Container>
-        <FlexContainerRow>
-          <img
-            src={logo}
-            alt="Imagen del logo de la facultad"
-            className={classes.logo}
-          />
-          {navbar}
-        </FlexContainerRow>
+      <Container className={classes.textAlign}>
+        <div className={classes.infoBox}>
+          <h4>¡Hola, {name}!</h4>
+          <p>Bienvenido a la web de Laboratorios Remotos</p>
+        </div>
       </Container>
     </header>
   );

@@ -15,7 +15,7 @@ export default defineConfig({
         $darkSecondaryColor:#3d582e;
         $white: #ffffff;
         $black: #000000;
-        $lightGrey: #C0C1C3;
+        $lightGrey:rgb(224, 225, 228);
         $grey: #97989A;
         $darkGrey: #3d3d3d;
         $red: #d61d16;
