@@ -12,7 +12,7 @@ interface Props {
 export const FormLayout = ({ title, legend, children }: Props) => {
   return (
     <div className={classes.box}>
-      <Link to={"/"} className={classes.link}>
+      <Link to={"/login"} className={classes.link}>
         <img src={logo} alt="Logo de la Facultad" className={classes.logo} />
       </Link>
 
